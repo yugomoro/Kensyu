@@ -1,8 +1,8 @@
 import math
 
-for i in range(0, 360, 15):
+for i in range(0, 361,15):
     rad = math.radians(i)
     sin_val = math.sin(rad)
     cos_val = math.cos(rad)
     tan_val = math.tan(rad)
-    print(f"sin({i}°) = {sin_val:.4f}, cos({i}°) = {cos_val:.4f}, tan({i}°) = {tan_val:.4f}")
+    print(f"sin({i}°) = {sin_val}, cos({i}°) = {cos_val}, tan({i}°) = {tan_val}")
