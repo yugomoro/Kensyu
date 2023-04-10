@@ -28,18 +28,24 @@ for ($i = 0; $i < $num_strawberries; $i++) {
 $max_peach_price = max($peach_prices);
 $min_peach_price = min($peach_prices);
 $avg_peach_price = array_sum($peach_prices) / $num_peaches;
+//少数第1位で四捨五入
+$rounded_avg_peach_price = round($avg_peach_price,1);
 
 $max_strawberry_price = max($strawberry_prices);
 $min_strawberry_price = min($strawberry_prices);
 $avg_strawberry_price = array_sum($strawberry_prices) / $num_strawberries;
+//少数第1位で四捨五入
+$rounded_avg_strawberry_price = round($avg_strawberry_price,1);
 
 // 結果を出力（平均価格は少数第1位で四捨五入）
 echo "桃の最高値: " . $max_peach_price . "\n";
 echo "桃の最安値: " . $min_peach_price . "\n";
-echo "桃の平均価格: " . round($avg_peach_price,1) . "\n\n"; 
+//少数第1位で表示
+echo "桃の平均価格: " . number_format($avg_peach_price,1) . "\n\n";
 
 echo "イチゴの最高値: " . $max_strawberry_price . "\n";
 echo "イチゴの最安値: " . $min_strawberry_price . "\n";
-echo "イチゴの平均価格: " . round($avg_strawberry_price,1) . "\n";
+//少数第1位で表示
+echo "イチゴの平均価格: " . number_format($avg_strawberry_price,1) . "\n";
 
 ?>
